@@ -21,7 +21,7 @@ def getTextOverlay(input_image):
     img2gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
     ret, mask = cv2.threshold(img2gray, 10,255, cv2.THRESH_BINARY)
     figure_size = 5
-    output = cv2.blur(th3,(figure_size, figure_size))
+    output = cv2.blur(mask,(figure_size, figure_size))
     # Write your code here for output
     
     return output
